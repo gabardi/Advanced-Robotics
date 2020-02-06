@@ -156,7 +156,7 @@ T21_B = [c3    -s3*cosd(0)    s3*sind(0)   (L1+L2+d2)*(c3)
 
 
 T_B = T10_B*T21_B;
-pretty(T_B)
+pretty(T_B);
 
 
 
@@ -201,10 +201,10 @@ H43_6 = [1   0   0    0
          0   0   1    0
          0   0   0    1];
 
-H54_6 = [c5   s5   0    0
-        -s5   c5   0    0
-          0    0   1    0
-          0    0   0    1];
+H54_6 = [c5    s5    0    0
+        -s5    c5    0    0
+          0     0    1    0
+          0     0    0    1];
 
 H65_6 = [-c6   s6   0    0
           0    0    1    3
@@ -281,7 +281,7 @@ for i = 1:length(t)
     %          0  0  0  1]; Shift in end effector
 
 
-    H60_6_End_Effector_nonsyms = H10_6*H21_6*H32_6*H43_6*H54_6*H65_6
+    H60_6_End_Effector_nonsyms = H10_6*H21_6*H32_6*H43_6*H54_6*H65_6;
     
     end_effector_position(:,i) = H60_6_End_Effector_nonsyms(:,4);
     
