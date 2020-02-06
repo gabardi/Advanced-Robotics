@@ -40,7 +40,7 @@ H20 = [0 0 -1 0
        0 0  0 1];
 
 % Verified that H20 found analytically equals H20 found by H10*H21
-H20_Proof = H10*H21 
+H20_Proof = H10*H21; 
 
 %% Problem 3
 
@@ -121,20 +121,20 @@ s3 = sin(q3);
 
 % DH Convention Transformation
 
-T10_A = [c1    0    s1    0
-         s1     0   -c1    0
-         0        1     0      L1
-         0           0               0          1];
+T10_A = [c1    0     s1     0
+         s1    0    -c1     0
+         0     1      0     L1
+         0     0      0     1];
 
 T21_A = [c2    -s2    0    L2*c2
          s2     c2    0    L2*s2
          0       0    1      0
          0       0    0      1];
 
-T32_A = [c3    -s3   0   L3*c3
-         s3     c3   0    L3*c3
-         0      0    1    0
-         0      0     0   1];
+T32_A = [c3    -s3    0    L3*c3
+         s3     c3    0    L3*c3
+         0      0     1      0
+         0      0     0      1];
 
 
 T_A1 = T10_A*T21_A
